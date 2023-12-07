@@ -1,0 +1,49 @@
+RewriteEngine On
+RewriteBase /Majestic%20MVC/
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^home/?$ index.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^produk/?$ views/produk/index.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^layanan/?$ views/layanan/index.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^tambahproduk?$ views/produk/tambah.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^editproduk(\d+)/?$ views/produk/edit.php?id=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^hapusproduk(\d+)/?$ views/produk/hapus.php?id=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^prosestambahproduk/?$ views/produk/proses_tambah.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^tambahlayanan/?$ views/layanan/tambah.php?page=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^editlayanan(\d+)/?$ views/layanan/edit.php?id=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^hapuslayanan(\d+)/?$ views/layanan/hapus.php?id=$1 [L]
+
+ReWriteCond %{REQUEST_FILENAME} !-f
+ReWriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^prosestambahlayanan/?$ views/layanan/proses_tambah.php?page=$1 [L]
+
+
+
